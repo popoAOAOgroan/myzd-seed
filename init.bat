@@ -46,3 +46,6 @@ CALL npm install gulp-util
 
 ECHO 'install gulp-connect...'
 CALL npm install gulp-connect
+
+ECHO 'install gulp-seajs-combo...'
+CALL npm install gulp-seajs-combo

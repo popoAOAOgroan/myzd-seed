@@ -33,6 +33,7 @@
     "gulp-rev": "^7.1.0",
     "gulp-rimraf": "^0.2.0",
     "gulp-sass": "^2.3.2",
+    "gulp-seajs-combo": "^1.2.3",
     "gulp-template": "^4.0.0",
     "gulp-uglify": "^2.0.0",
     "jshint": "^2.9.2"

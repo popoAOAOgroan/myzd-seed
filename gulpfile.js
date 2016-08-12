@@ -17,7 +17,7 @@ var connect = require('gulp-connect');//connect服务
 var template = require('gulp-template');//静态模板内容替换
 
 var frameworkPaths = {
-    jsPath: ['framework/js/lib/angular.js',
+    jsPath: ['framework/js/lib/angular.min.js',
         'framework/js/lib/angular-animate.js',
         'framework/js/lib/angular-cookies.js',
         'framework/js/lib/angular-ui-router.js',
