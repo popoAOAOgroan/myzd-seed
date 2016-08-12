@@ -1,0 +1,60 @@
+<!doctype html>
+<html id="ng-app" ng-app="1yd_h5">
+<head>
+    <base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--以IE8模式渲染-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta name="apple-touch-fullscreen" content="YES"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-touch-fullscreen" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>我要运动</title>
+    <link rel="stylesheet" href="framework/framework.css"/>
+    <!-- <link rel="stylesheet" href="components/components.css"/> -->
+    <link rel="stylesheet" href="app/app.css"/>
+</head>
+<script type="text/javascript">
+    (function (t) {
+        function s() {
+            var a = o.clientWidth,
+                    d = "}";
+            !navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i) && a > 1024 && (a = 750, d = ";max-width:" + a + "px;margin-right:auto!important;margin-left:auto!important;}"), t.rem = a / 10, /ZTE U930_TD/.test(navigator.userAgent) && (t.rem = 1.13 * t.rem), m.innerHTML = "html{font-size:" + t.rem + "px!important;}body{font-size:" + 12 * (a / 375) + "px" + d;
+            window.rem = t.rem;
+        }
+
+        var r, q, p, o = document.documentElement,
+                n = document.querySelector('meta[name="viewport"]'),
+                m = document.createElement("style"),
+                r = t.devicePixelRatio || 1;
+        if (q = 1 / r, !n) {
+            return void console.warn('\u8bf7\u8bbe\u7f6e\u9ed8\u8ba4viewport\u4e3a\uff1a<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />')
+        }
+        if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            var l = o.clientWidth;
+            375 === l && n.setAttribute("content", "user-scalable=no"), n.setAttribute("content", "width=" + r * l + ",initial-scale=" + q + ",maximum-scale=" + q + ", minimum-scale=" + q + ",user-scalable=no")
+        } else {
+            var k = navigator.userAgent.match(/Android[\S\s]+AppleWebkit\/?(\d{3})/i);
+            !k || k && k[1] > 534 ? n.setAttribute("content", "target-densitydpi=device-dpi,width=" + r * o.clientWidth + ",user-scalable=no,initial-scale=" + q + ",maximum-scale=" + q + ", minimum-scale=" + q) : r = 1
+        }
+        o.firstElementChild.appendChild(m), o.setAttribute("data-dpr", r), t.dpr = r, t.addEventListener("resize", function () {
+            clearTimeout(p), p = setTimeout(s, 300)
+        }, !1), t.addEventListener("pageshow", function (b) {
+            b.persisted && (clearTimeout(p), p = setTimeout(s, 300))
+        }, !1), s()
+        window.dpr = r;
+    })(window);
+</script>
+<body>
+<div class="container-fluid" ng-controller="AppMainCtrl">
+    <div class="row full-screen" ui-view>
+        <!-- <div style="width: 100%; height: 100%; background: #FF6633 url('../framework/images/1yd-text-white.png') no-repeat center center; background-size: 50%;"></div> -->
+    </div>
+</div>
+</body>
+<script src="framework/framework.js"></script>
+<!-- <script src="components/components.js"></script> -->
+<script src="app/app.js"></script>
+</html>

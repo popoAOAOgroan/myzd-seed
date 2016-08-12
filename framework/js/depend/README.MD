@@ -1,0 +1,1 @@
+#In this folder, all javascript files must be compressed.
