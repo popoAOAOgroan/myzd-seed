@@ -49,3 +49,9 @@ CALL npm install gulp-connect
 
 ECHO 'install gulp-seajs-combo...'
 CALL npm install gulp-seajs-combo
+
+ECHO 'install gulp-run-sequence...'
+CALL npm install run-sequence
+
+ECHO 'install gulp-autoprefixer...'
+CALL npm install gulp-autoprefixer --save-dev

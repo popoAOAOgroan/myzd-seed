@@ -12,9 +12,9 @@
     <meta name="apple-touch-fullscreen" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <title>名医主刀</title>
-    <link rel="stylesheet" href="framework/framework.css"/>
+    <!-- <link rel="stylesheet" href="framework/framework.css"/> -->
     <!-- <link rel="stylesheet" href="components/components.css"/> -->
-    <link rel="stylesheet" href="app/app.css"/>
+    <!-- <link rel="stylesheet" href="app/app.css"/> -->
 </head>
 <script type="text/javascript">
     (function (t) {
@@ -54,7 +54,17 @@
     </div>
 </div>
 </body>
-<script src="framework/framework.js"></script>
+<!-- <script src="framework/framework.js"></script> -->
 <!-- <script src="components/components.js"></script> -->
-<script src="app/app.js"></script>
+<!-- <script src="app/app.js"></script> -->
+<script src="framework/js/depend/sea.js"></script>
+<script src="framework/js/lib/angular.js"></script>
+<script type="text/javascript">
+    seajs.config({
+        base: 'http://localhost:30000/',
+        // debug: true,
+        // alias: { 'angularjs': 'framework/js/lib/angular' }
+    });
+    seajs.use('app/main.js');
+</script>
 </html>
