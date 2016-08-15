@@ -1,10 +1,13 @@
 
-define(function(require) {
+define(function(require,exports) {
 
-    var app = angular.module('myzd', ['ui.router','ngResource']);
+    exports.init = function(){  
+        var app = angular.module('myzd', []);
+        app.controller('AppMainCtrl', ['$scope', function ($scope) {
+            $scope.enterTip = '正在拼命加载中';
+            
+        }]);
+        angular.bootstrap(window.document, ['myzd']);
+    }
 
-    app.controller('AppMainCtrl', ['$scope', function ($scope) {
-        $scope.enterTip = '正在拼命加载中';
-        document.title = "我要运动";
-    }]);
 });
